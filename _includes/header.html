@@ -1,0 +1,57 @@
+<header class="site-header">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><img class="img-responsive" src="{{ "/img/global/logo-sm.png" | prepend: site.baseurl }}" alt="Maig: The Gathering API" /></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          {% for page in site.pages %}
+              {% if page.title %}
+                <li>
+                  <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                </li>
+              {% endif %}
+          {% endfor %}
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+              <i class="fa fa-rss"></i><span class="visible-xs">RSS Feed</span>
+            </a>
+          </li>
+          {% if site.twitter_username %}
+            <li>
+              <a class="social" href="https://twitter.com/{{ site.twitter_username }}" rel="nofollow">
+                <i class="fa fa-twitter"></i><span class="visible-xs">{{ site.twitter_username }}</span>
+              </a>
+            </li>
+          {% endif %}
+          {% if site.github_username %}
+            <li>
+              <a href="https://github.com/{{ site.github_username }}" rel="nofollow">
+                <i class="fa fa-github"></i><span class="visible-xs">{{ site.github_username }}</span>
+              </a>
+            </li>
+          {% endif %}
+          {% if site.linkedin_username %}
+            <li>
+              <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" rel="nofollow">
+                <i class="fa fa-linkedin"></i><span class="visible-xs">{{ site.linkedin_username }}</span>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
