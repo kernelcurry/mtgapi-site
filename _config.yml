@@ -6,7 +6,7 @@ An easy to use API for Magic: The Gathering.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://mtgapi.com" # the base hostname & protocol for your site
 twitter_username:  kernelcurry
-github_username:   michaelcurry
+github_username:   kernelcurry
 linkedin_username: michaeliancurry
 
 # Build settings
